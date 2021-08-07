@@ -15,16 +15,13 @@ async def start(client, message):
             text=script.START_MSG.format(message.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
+               
                     [
                         InlineKeyboardButton("HELP", callback_data="help_data"),
                         InlineKeyboardButton("ABOUT", callback_data="about_data"),
                     ],
-                    [
-                        InlineKeyboardButton(
-                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")
-                    ]
-                ]
+                   
+               
             ),
             reply_to_message_id=message.message_id
         )
@@ -38,16 +35,13 @@ async def help(client, message):
             text=script.HELP_MSG,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
+                
                     [
                         InlineKeyboardButton("BACK", callback_data="start_data"),
                         InlineKeyboardButton("ABOUT", callback_data="about_data"),
                     ],
-                    [
-                        InlineKeyboardButton(
-                            "⭕️ SUPPORT ⭕️", url="https://t.me/TroJanzSupport")
-                    ]
-                ]
+                    
+                
             ),
             reply_to_message_id=message.message_id
         )
@@ -61,16 +55,13 @@ async def about(client, message):
             text=script.ABOUT_MSG,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
+              
                     [
                         InlineKeyboardButton("BACK", callback_data="help_data"),
                         InlineKeyboardButton("START", callback_data="start_data"),
                     ],
-                    [
-                        InlineKeyboardButton(
-                            "SOURCE CODE", url="https://github.com/TroJanzHEX/Auto-Filter-Bot")
-                    ]
-                ]
+                   
+               
             ),
             reply_to_message_id=message.message_id
         )
